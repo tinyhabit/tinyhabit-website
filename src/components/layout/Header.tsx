@@ -40,7 +40,7 @@ export const Header: React.FC = () => {
 
         <ul className={styles.navLinks}>
           {NAV_ITEMS.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
             return (
               <li key={item.href}>
                 <Link

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../ui/Button';
@@ -13,6 +13,35 @@ interface MobileNavProps {
 }
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, items }) => {
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    
+    const drawer = drawerRef.current;
+    if (!drawer) return;
+    
+    const focusableElements = drawer.querySelectorAll<HTMLElement>(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0];
+    
+    if (firstElement) {
+      firstElement.focus();
+    }
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
   return (
     <>
       <div
@@ -24,6 +53,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, items }) 
         className={`${styles.drawer} ${isOpen ? styles.openDrawer : ''}`}
         role="dialog"
         aria-modal="true"
+        ref={drawerRef}
       >
         <div className={styles.header}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

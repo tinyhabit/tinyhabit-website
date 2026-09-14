@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useId } from 'react';
 import styles from './accordion.module.css';
 
 interface AccordionProps {
@@ -15,6 +15,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   defaultOpen = false
 }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
+  const contentId = useId();
 
   return (
     <div className={`${styles.accordion} ${isOpen ? styles.open : ''}`}>
@@ -22,11 +23,12 @@ export const Accordion: React.FC<AccordionProps> = ({
         className={styles.trigger}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
+        aria-controls={contentId}
       >
         <span>{title}</span>
         <span className={styles.icon}>↓</span>
       </button>
-      <div className={styles.content}>
+      <div id={contentId} className={styles.content}>
         <div>{children}</div>
       </div>
     </div>

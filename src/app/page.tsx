@@ -35,7 +35,7 @@ export default function HomePage() {
           <p className={styles.problemQuote}>
             &ldquo;Tôi từng mua rất nhiều Planner vì muốn thay đổi bản thân, nhưng rồi lại bỏ cuộc vì áp lực hoàn hảo...&rdquo;
           </p>
-          <p style={{ color: 'var(--color-muted)', fontSize: '1rem', lineHeight: '1.6' }}>
+          <p className={styles.problemSubtext}>
             Bạn không thiếu kỷ luật. Vấn đề là hầu hết hệ thống quản lý đều quá khắc nghiệt. TinyHabit được tạo ra để giúp bạn gạt bỏ cảm giác có lỗi và tiến bộ từ những hành động nhỏ có thể lặp lại mỗi ngày.
           </p>
         </div>
@@ -44,14 +44,14 @@ export default function HomePage() {
       {/* SECTION 3: BRAND PHILOSOPHY PILLARS */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--color-brand)' }}>TRIẾT LÝ CỐT LÕI</span>
+          <span className={styles.sectionSubtitle}>TRIẾT LÝ CỐT LÕI</span>
           <h2 className={styles.sectionTitle}>Ba Trụ Cột Nurturing Habits</h2>
           <p className={styles.sectionDesc}>Hệ thống giúp bạn duy trì nhịp sống kỷ luật nhưng luôn bình yên</p>
         </div>
 
         <div className={styles.pillarsGrid}>
           <div className={styles.pillarCard}>
-            <span className={styles.pillarIcon}>🌱</span>
+            <span className={styles.pillarIcon} role="img" aria-label="Mầm cây">🌱</span>
             <h3 className={styles.pillarTitle}>1. Gentle Discipline</h3>
             <p className={styles.pillarDesc}>
               Kỷ luật dịu dàng. Ưu tiên sự đều đặn và bền vững hơn là những nỗ lực cực đoan gây kiệt sức.
@@ -59,7 +59,7 @@ export default function HomePage() {
           </div>
 
           <div className={styles.pillarCard}>
-            <span className={styles.pillarIcon}>⚡</span>
+            <span className={styles.pillarIcon} role="img" aria-label="Tia chớp">⚡</span>
             <h3 className={styles.pillarTitle}>2. Energy over Time</h3>
             <p className={styles.pillarDesc}>
               Quản lý năng lượng thay vì chỉ ép buộc thời gian. Lắng nghe nhịp sinh hoạt và khả năng tập trung sâu.
@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
 
           <div className={styles.pillarCard}>
-            <span className={styles.pillarIcon}>🌿</span>
+            <span className={styles.pillarIcon} role="img" aria-label="Chiếc lá">🌿</span>
             <h3 className={styles.pillarTitle}>3. Intentional Living</h3>
             <p className={styles.pillarDesc}>
               Sống có chủ đích. Chủ động lựa chọn điều quan trọng thay vì sống theo quán tính hay mạng xã hội.
@@ -86,34 +86,34 @@ export default function HomePage() {
 
           <div className={styles.collectionGrid}>
             <Link href="/bo-suu-tap#planner" className={styles.colCard}>
-              <span style={{ fontSize: '2rem' }}>📖</span>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Sổ tay Planner</h3>
-              <p style={{ color: 'var(--color-muted)', fontSize: '0.95rem' }}>
+              <span className={styles.colCardIcon} role="img" aria-label="Cuốn sách">📖</span>
+              <h3 className={styles.colCardTitle}>Sổ tay Planner</h3>
+              <p className={styles.colCardDesc}>
                 JOURNEY 90 Days, Dopamine Detox 30 Days, Inner Power 60 Days.
               </p>
-              <span style={{ color: 'var(--color-brand)', fontWeight: 600, fontSize: '0.9rem', marginTop: 'auto' }}>
+              <span className={styles.colCardLink}>
                 Xem danh mục →
               </span>
             </Link>
 
             <Link href="/bo-suu-tap#journaling" className={styles.colCard}>
-              <span style={{ fontSize: '2rem' }}>✍️</span>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Sổ tay Nhật Ký</h3>
-              <p style={{ color: 'var(--color-muted)', fontSize: '0.95rem' }}>
+              <span className={styles.colCardIcon} role="img" aria-label="Bút viết">✍️</span>
+              <h3 className={styles.colCardTitle}>Sổ tay Nhật Ký</h3>
+              <p className={styles.colCardDesc}>
                 TinyTalk 60 Days, 30 Days Journaling lắng nghe cảm xúc bản thân.
               </p>
-              <span style={{ color: 'var(--color-brand)', fontWeight: 600, fontSize: '0.9rem', marginTop: 'auto' }}>
+              <span className={styles.colCardLink}>
                 Xem danh mục →
               </span>
             </Link>
 
             <Link href="/bo-suu-tap#bo-tro" className={styles.colCard}>
-              <span style={{ fontSize: '2rem' }}>🎨</span>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 700 }}>Sản phẩm Bổ Trợ</h3>
-              <p style={{ color: 'var(--color-muted)', fontSize: '0.95rem' }}>
-                Kit Gieo Mầm Thói Quen, Notebook Talk To Yourself Gently & Just Me & My Mind.
+              <span className={styles.colCardIcon} role="img" aria-label="Bảng màu">🎨</span>
+              <h3 className={styles.colCardTitle}>Sản phẩm Bổ Trợ</h3>
+              <p className={styles.colCardDesc}>
+                Kit Gieo Mầm Thói Quen, Notebook Talk To Yourself Gently &amp; Just Me &amp; My Mind.
               </p>
-              <span style={{ color: 'var(--color-brand)', fontWeight: 600, fontSize: '0.9rem', marginTop: 'auto' }}>
+              <span className={styles.colCardLink}>
                 Xem danh mục →
               </span>
             </Link>
@@ -130,7 +130,7 @@ export default function HomePage() {
 
         <ProductGrid products={featuredProducts} columns={4} />
 
-        <div style={{ textAlign: 'center', marginTop: 'var(--space-xl)' }}>
+        <div className={styles.viewAllWrapper}>
           <Button href="/bo-suu-tap" variant="outline" size="md">
             Xem tất cả 8 sản phẩm
           </Button>
@@ -147,32 +147,32 @@ export default function HomePage() {
         <div className={styles.howGrid}>
           <div className={styles.howStep}>
             <span className={styles.stepNum}>01</span>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Lựa chọn hành trình</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-muted)' }}>
+            <h3 className={styles.howStepTitle}>Lựa chọn hành trình</h3>
+            <p className={styles.howStepDesc}>
               Chọn cuốn Planner hoặc Journaling 30, 60 hay 90 ngày đúng với nhu cầu hiện tại.
             </p>
           </div>
 
           <div className={styles.howStep}>
             <span className={styles.stepNum}>02</span>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Hành động nhỏ mỗi ngày</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-muted)' }}>
+            <h3 className={styles.howStepTitle}>Hành động nhỏ mỗi ngày</h3>
+            <p className={styles.howStepDesc}>
               Dành 5-10 phút sáng/tối để ghi nhận năng lượng và làm các nhiệm vụ khả thi.
             </p>
           </div>
 
           <div className={styles.howStep}>
             <span className={styles.stepNum}>03</span>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Nhìn lại & Phản chiếu</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-muted)' }}>
+            <h3 className={styles.howStepTitle}>Nhìn lại &amp; Phản chiếu</h3>
+            <p className={styles.howStepDesc}>
               Đánh giá tiến trình hàng tuần một cách dịu dàng, không phán xét bản thân.
             </p>
           </div>
 
           <div className={styles.howStep}>
             <span className={styles.stepNum}>04</span>
-            <h3 style={{ fontSize: '1.1rem', fontWeight: 700 }}>Nuôi dưỡng thói quen</h3>
-            <p style={{ fontSize: '0.9rem', color: 'var(--color-muted)' }}>
+            <h3 className={styles.howStepTitle}>Nuôi dưỡng thói quen</h3>
+            <p className={styles.howStepDesc}>
               Biến từng bước tiến nhỏ thành sự tự tin và nhịp sống chủ động lâu dài.
             </p>
           </div>
@@ -181,10 +181,10 @@ export default function HomePage() {
 
       {/* SECTION 7: ABOUT TINYHABIT PREVIEW */}
       <section className={styles.sectionAlt}>
-        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-          <span style={{ fontSize: '2.5rem', marginBottom: '12px', display: 'block' }}>🌱</span>
-          <h2 className={styles.sectionTitle} style={{ marginBottom: '16px' }}>Về TinyHabit</h2>
-          <p style={{ fontSize: '1.05rem', color: 'var(--color-text)', lineHeight: '1.7', marginBottom: '24px' }}>
+        <div className={`container ${styles.aboutPreview}`}>
+          <span className={styles.aboutIcon} role="img" aria-label="Mầm cây">🌱</span>
+          <h2 className={styles.sectionTitleSpaced}>Về TinyHabit</h2>
+          <p className={styles.aboutText}>
             TinyHabit không ra đời để bán những cuốn sổ tay thông thường. Chúng mình bắt đầu từ trăn trở: Làm sao để người trẻ có thể kiên trì thay đổi bản thân mà không rơi vào cái bẫy kiệt sức hay cảm giác tội lỗi?
           </p>
           <Button href="/ve-tinyhabit" variant="primary">
@@ -196,19 +196,19 @@ export default function HomePage() {
       {/* SECTION 8: MEMBERSHIP SHOWCASE */}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--color-accent)' }}>HỆ SINH THÁI ĐỒNG HÀNH</span>
+          <span className={styles.sectionSubtitleAccent}>HỆ SINH THÁI ĐỒNG HÀNH</span>
           <h2 className={styles.sectionTitle}>TinyHabit Membership</h2>
           <p className={styles.sectionDesc}>Gói đồng hành trọn năm cho hành trình phát triển bền vững</p>
         </div>
 
-        <div className={styles.problemCard} style={{ textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <h3 style={{ fontSize: '1.4rem', fontWeight: 700, color: 'var(--color-brand-dark)' }}>
+        <div className={`${styles.problemCard} ${styles.membershipCard}`}>
+          <h3 className={styles.membershipTitle}>
             Dành cho ai muốn cam kết dài lâu với bản thân
           </h3>
-          <p style={{ color: 'var(--color-muted)', lineHeight: '1.6' }}>
+          <p className={styles.membershipDesc}>
             Membership bao gồm 4 cuốn Planner cho 4 quý, quyền tham gia các buổi Workshop chuyên đề, buổi gặp mặt Tiny Meeting và sự hỗ trợ liên tục từ cộng đồng.
           </p>
-          <div style={{ marginTop: '8px' }}>
+          <div className={styles.membershipCta}>
             <Button href="/membership" variant="secondary">
               Tìm hiểu quyền lợi Membership →
             </Button>
@@ -225,28 +225,28 @@ export default function HomePage() {
 
         <div className={styles.testimonialGrid}>
           <div className={styles.testCard}>
-            <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: 'var(--color-text)' }}>
+            <p className={styles.testQuote}>
               &ldquo;Nhờ JOURNEY 90 Days mà mình không còn đặt những mục tiêu quá sức rồi bỏ dở nữa. Cảm giác mỗi ngày hoàn thành một việc nhỏ rất dễ chịu.&rdquo;
             </p>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-brand-dark)' }}>
+            <span className={styles.testAuthor}>
               — Minh Anh, Sinh viên Hà Nội
             </span>
           </div>
 
           <div className={styles.testCard}>
-            <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: 'var(--color-text)' }}>
+            <p className={styles.testQuote}>
               &ldquo;Cuốn Dopamine Detox giúp mình nhận ra mình đã tốn bao nhiêu thời gian lướt TikTok vô thức. Giờ mình lấy lại được sự tập trung khi làm việc.&rdquo;
             </p>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-brand-dark)' }}>
+            <span className={styles.testAuthor}>
               — Hoàng Nam, Content Creator
             </span>
           </div>
 
           <div className={styles.testCard}>
-            <p style={{ fontStyle: 'italic', fontSize: '0.95rem', color: 'var(--color-text)' }}>
+            <p className={styles.testQuote}>
               &ldquo;Giấy sổ rất dày, viết êm tay. Thích nhất là những câu hỏi nhắc nhở dịu dàng trong sổ TinyTalk mỗi tối.&rdquo;
             </p>
-            <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-brand-dark)' }}>
+            <span className={styles.testAuthor}>
               — Thanh Thảo, Nhân viên Văn phòng
             </span>
           </div>
@@ -255,10 +255,10 @@ export default function HomePage() {
 
       {/* SECTION 10: FINAL INSTAGRAM CTA */}
       <section className={styles.finalCtaBox}>
-        <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 800 }}>
+        <h2 className={styles.finalCtaTitle}>
           Sẵn sàng bắt đầu hành trình dịu dàng cùng TinyHabit?
         </h2>
-        <p style={{ maxWidth: '600px', fontSize: '1rem', color: 'rgba(255, 255, 255, 0.9)' }}>
+        <p className={styles.finalCtaDesc}>
           Nhắn tin cho TinyHabit qua Instagram để được team tư vấn lựa chọn sản phẩm phù hợp nhất với chặng đường hiện tại của bạn.
         </p>
         <Button

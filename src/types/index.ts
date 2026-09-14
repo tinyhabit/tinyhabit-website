@@ -8,6 +8,15 @@ export interface ProductSpecs {
   contents?: string;
 }
 
+export interface ProductVariant {
+  id: string;
+  name: string;
+  color?: string;
+  price: number;
+  inStock: boolean;
+  image?: string;
+}
+
 export interface ProductSEO {
   title: string;
   description: string;
@@ -25,6 +34,9 @@ export interface Product {
   currency: string;
   duration?: string;
   coverColor?: string;
+  variants?: ProductVariant[];
+  inStock?: boolean;
+  sku?: string;
   images: string[];
   shortDescription: string;
   longDescription: string;

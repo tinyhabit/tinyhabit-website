@@ -1,0 +1,27 @@
+.container {
+  padding: var(--space-3xl) var(--space-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.description {
+  color: var(--color-muted);
+  max-width: 500px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}

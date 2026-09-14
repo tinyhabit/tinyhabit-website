@@ -19,6 +19,8 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth,
   children,
   className = '',
+  type,
+  disabled,
   ...props
 }) => {
   const classNames = [
@@ -30,6 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
   ].filter(Boolean).join(' ');
 
   if (href) {
+    const anchorProps = props as unknown as React.AnchorHTMLAttributes<HTMLAnchorElement>;
     if (external) {
       return (
         <a
@@ -37,20 +40,21 @@ export const Button: React.FC<ButtonProps> = ({
           target="_blank"
           rel="noopener noreferrer"
           className={classNames}
+          {...anchorProps}
         >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={classNames}>
+      <Link href={href} className={classNames} {...anchorProps}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={classNames} {...props}>
+    <button className={classNames} type={type} disabled={disabled} {...props}>
       {children}
     </button>
   );

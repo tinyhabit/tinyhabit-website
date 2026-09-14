@@ -6,6 +6,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 export const metadata: Metadata = {
   title: 'Về TinyHabit — Câu Chuyện Thương Hiệu & Triết Lý',
   description: 'Khám phá hành trình hình thành TinyHabit, thương hiệu đồng hành phát triển bản thân từ những thói quen nhỏ dịu dàng.',
+  alternates: { canonical: '/ve-tinyhabit' },
   openGraph: {
     title: 'Câu Chuyện TinyHabit | Gentle Discipline',
     description: 'Chúng mình tin rằng sự thay đổi bền vững bắt đầu từ những thói quen nhỏ và sự bao dung với chính mình.'
@@ -31,30 +32,32 @@ const breadcrumbJsonLd = {
   ]
 };
 
+import styles from '@/styles/pages/about.module.css';
+
 export default function AboutPage() {
   return (
-    <div className="container" style={{ maxWidth: '840px', paddingBottom: 'var(--space-2xl)' }}>
+    <div className={`container ${styles.container}`}>
       <JsonLd data={breadcrumbJsonLd} />
 
-      <header style={{ textAlign: 'center', padding: 'var(--space-xl) 0 var(--space-lg)' }}>
-        <span style={{ fontSize: '0.85rem', fontWeight: 700, letterSpacing: '0.1em', color: 'var(--color-brand)' }}>
+      <header className={styles.header}>
+        <span className={styles.subtitle}>
           OUR STORY & PHILOSOPHY
         </span>
-        <h1 style={{ fontSize: 'clamp(2.2rem, 4vw, 3.2rem)', fontWeight: 800, marginTop: '8px' }}>
+        <h1 className={styles.title}>
           Về TinyHabit
         </h1>
-        <p style={{ color: 'var(--color-brand-dark)', fontSize: '1.2rem', fontWeight: 600, marginTop: '12px' }}>
+        <p className={styles.quote}>
           &ldquo;NURTURING HABITS - GROWING DREAMS&rdquo;
         </p>
       </header>
 
       {/* FOUNDER STORY CONTENT */}
-      <article style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-lg)', fontSize: '1.05rem', lineHeight: '1.8', color: 'var(--color-text)' }}>
-        <section style={{ background: 'var(--color-card-bg)', padding: 'var(--space-xl)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-brand-dark)', marginBottom: '12px' }}>
+      <article className={styles.article}>
+        <section className={styles.sectionCard}>
+          <h2 className={styles.sectionTitle}>
             Vì sao TinyHabit tồn tại?
           </h2>
-          <p style={{ marginBottom: '16px' }}>
+          <p className={styles.paragraph}>
             TinyHabit không ra đời đơn thuần như một cửa hàng bán văn phòng phẩm hay sổ tay Planner. Chúng mình được thành lập từ một trăn trở rất thực tế của chính những người trẻ đang nỗ lực thay đổi bản thân mỗi ngày.
           </p>
           <p>
@@ -62,11 +65,11 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <section style={{ background: 'var(--color-card-bg)', padding: 'var(--space-xl)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-brand-dark)', marginBottom: '12px' }}>
+        <section className={styles.sectionCard}>
+          <h2 className={styles.sectionTitle}>
             Kỷ Luật Nhưng Không Khắc Nghiệt (Gentle Discipline)
           </h2>
-          <p style={{ marginBottom: '16px' }}>
+          <p className={styles.paragraph}>
             TinyHabit tin rằng: Sự thay đổi lớn không đến từ nỗ lực bộc phát trong một vài ngày kiệt sức. Sự thay đổi bền vững được nuôi dưỡng từ những thói quen nhỏ (Tiny Habits), đủ dịu dàng để làm mỗi ngày và đủ kiên trì để tiếp tục.
           </p>
           <p>
@@ -74,27 +77,27 @@ export default function AboutPage() {
           </p>
         </section>
 
-        <section style={{ background: 'var(--color-card-bg)', padding: 'var(--space-xl)', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 700, color: 'var(--color-brand-dark)', marginBottom: '16px' }}>
+        <section className={styles.sectionCard}>
+          <h2 className={styles.sectionTitlePillars}>
             Ba Trụ Cột Triết Lý
           </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <div className={styles.pillarsList}>
             <div>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--color-brand)' }}>1. Gentle Discipline</h3>
-              <p style={{ fontSize: '0.95rem', color: 'var(--color-muted)' }}>Ưu tiên sự đều đặn bền vững hơn những nỗ lực bốc đồng cực đoan.</p>
+              <h3 className={styles.pillarTitle}>1. Gentle Discipline</h3>
+              <p className={styles.pillarDesc}>Ưu tiên sự đều đặn bền vững hơn những nỗ lực bốc đồng cực đoan.</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--color-brand)' }}>2. Energy over Time</h3>
-              <p style={{ fontSize: '0.95rem', color: 'var(--color-muted)' }}>Quản lý nhịp sinh hoạt, năng lượng và sự tập trung sâu thay vì vắt kiệt thời gian.</p>
+              <h3 className={styles.pillarTitle}>2. Energy over Time</h3>
+              <p className={styles.pillarDesc}>Quản lý nhịp sinh hoạt, năng lượng và sự tập trung sâu thay vì vắt kiệt thời gian.</p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--color-brand)' }}>3. Intentional Living</h3>
-              <p style={{ fontSize: '0.95rem', color: 'var(--color-muted)' }}>Sống có chủ đích, loại bỏ xao nhãng kỹ thuật số và trân trọng khoảnh khắc hiện tại.</p>
+              <h3 className={styles.pillarTitle}>3. Intentional Living</h3>
+              <p className={styles.pillarDesc}>Sống có chủ đích, loại bỏ xao nhãng kỹ thuật số và trân trọng khoảnh khắc hiện tại.</p>
             </div>
           </div>
         </section>
 
-        <div style={{ textAlign: 'center', marginTop: 'var(--space-md)' }}>
+        <div className={styles.ctaWrapper}>
           <Button href="/bo-suu-tap" variant="primary" size="lg">
             Khám phá các công cụ TinyHabit
           </Button>

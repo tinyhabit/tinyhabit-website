@@ -220,3 +220,140 @@
   gap: var(--space-md);
   margin: var(--space-2xl) 0;
 }
+
+/* Collection Preview Cards - inner elements */
+.colCardIcon {
+  font-size: 2rem;
+}
+
+.colCardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.colCardDesc {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.colCardLink {
+  color: var(--color-brand);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Section subtitle label */
+.sectionSubtitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-brand);
+}
+
+.sectionSubtitleAccent {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+}
+
+/* How It Works Step text */
+.howStepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.howStepDesc {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Problem Card subtext */
+.problemSubtext {
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* About Preview Section */
+.aboutPreview {
+  max-width: 800px;
+  text-align: center;
+}
+
+.aboutIcon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.aboutText {
+  font-size: 1.05rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* View All Button Wrapper */
+.viewAllWrapper {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+
+/* Membership Card */
+.membershipCard {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.membershipTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
+.membershipDesc {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.membershipCta {
+  margin-top: 8px;
+}
+
+/* Testimonial Card text */
+.testQuote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.testAuthor {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-brand-dark);
+}
+
+/* Final CTA section text */
+.finalCtaTitle {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+}
+
+.finalCtaDesc {
+  max-width: 600px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Section title with bottom margin override */
+.sectionTitleSpaced {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+

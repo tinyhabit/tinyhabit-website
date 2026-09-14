@@ -122,3 +122,7 @@ img, video {
 .animate-fade-in {
   animation: fadeIn 500ms var(--transition-smooth) forwards;
 }
+
+.mainContent {
+  flex: 1;
+}

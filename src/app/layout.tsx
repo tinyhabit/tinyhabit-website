@@ -7,6 +7,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://tinyhabit.vn'),
+  alternates: { canonical: '/' },
   title: {
     default: 'TinyHabit — Nurturing Habits, Growing Dreams',
     template: '%s | TinyHabit'
@@ -62,7 +63,7 @@ export default function RootLayout({
       </head>
       <body>
         <Header />
-        <main style={{ flex: 1 }}>{children}</main>
+        <main className="mainContent">{children}</main>
         <Footer />
         <StickyMobileCTA />
       </body>
