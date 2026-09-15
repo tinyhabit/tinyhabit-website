@@ -1,109 +1,318 @@
-.container {
-  padding-bottom: var(--space-2xl);
+.pageWrapper {
+  padding-bottom: 64px;
 }
 
-.header {
+.coverContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 280px;
+}
+
+@media (min-width: 768px) {
+  .coverContainer {
+    height: 420px;
+  }
+}
+
+.coverImage {
+  object-fit: cover;
+  object-position: center 52%;
+}
+
+.heroHeader {
   text-align: center;
-  padding: var(--space-xl) 0 var(--space-lg);
+  max-width: 860px;
+  margin: 0 auto 48px auto;
+  padding: 0 16px;
 }
 
-.subtitle {
+.heroTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.heroDesc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+.heroDesc strong {
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+/* JOURNEYS SECTION */
+.journeysList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto 48px auto;
+}
+
+.journeyCardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journeyBadge {
+  background: #ffffff;
+  border: 1px solid #e2e2dc;
+  border-radius: 20px;
+  padding: 6px 18px;
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-accent);
-}
-
-.title {
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  margin-top: 8px;
-}
-
-.description {
-  color: var(--color-muted);
-  font-size: 1.1rem;
-  max-width: 640px;
-  margin: 16px auto 0;
-  line-height: 1.6;
-}
-
-.banner {
-  background-color: var(--color-card-bg);
-  border-radius: var(--radius-lg);
-  padding: var(--space-2xl) var(--space-lg);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
-  max-width: 800px;
-  margin: 0 auto var(--space-2xl);
-  text-align: center;
-}
-
-.bannerLabel {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--color-brand-dark);
-  text-transform: uppercase;
+  color: #555555;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: -14px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-.priceContainer {
-  margin: 16px 0;
-}
-
-.price {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-}
-
-.priceDuration {
-  font-size: 1rem;
-  color: var(--color-muted);
-  display: block;
-}
-
-.bannerDesc {
-  color: var(--color-text);
-  font-size: 1rem;
-  margin-bottom: 24px;
-}
-
-.benefitsSection {
-  margin-bottom: var(--space-2xl);
-}
-
-.benefitsTitle {
-  font-size: 1.8rem;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: var(--space-xl);
-}
-
-.benefitsGrid {
+.journeyCard {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e5e5df;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-md);
+  grid-template-columns: 1fr;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
-.benefitCard {
-  background: var(--bg-secondary);
-  padding: var(--space-lg);
-  border-radius: var(--radius-md);
+@media (min-width: 768px) {
+  .journeyCard {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-.benefitIcon {
-  font-size: 2rem;
+.journeyLeft {
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
 }
 
-.benefitCardTitle {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 12px 0 8px;
+.journeyTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #2b3e20;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-.benefitCardDesc {
-  color: var(--color-muted);
+.priceWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.priceText {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.lifetimeBadge {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.journeyLeftDesc {
   font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.ctaBtnPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid #6b7c52;
+  color: #3b482a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: transparent;
+  transition: all 0.2s ease;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.ctaBtnPill.solid {
+  background: #586744;
+  color: #ffffff;
+  border-color: #586744;
+}
+
+.ctaBtnPill:hover {
+  background: #708258;
+  color: #ffffff;
+  border-color: #708258;
+}
+
+.btnDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.journeyRight {
+  background: #edf1e8;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.checkIcon {
+  color: #586744;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* MIDDLE CONSULT SECTION */
+.consultSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 32px 0 64px 0;
+}
+
+.consultBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: 1px solid #d0d0c8;
+  background: #ffffff;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.consultBtn:hover {
+  border-color: #708258;
+  color: #708258;
+}
+
+.greenDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #708258;
+}
+
+.navArrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #d0d0c8;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navArrow:hover {
+  border-color: #708258;
+  color: #708258;
+}
+
+/* WORKSHOP CARDS SECTION */
+.workshopSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 64px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .workshopSection {
+    grid-template-columns: 1fr 1.2fr 1fr;
+  }
+}
+
+.workshopImageCard {
+  position: relative;
+  min-height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.workshopTextCard {
+  background: #f4f3ed;
+  border-radius: 20px;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.workshopTag {
+  font-size: 0.85rem;
+  color: #708258;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.workshopTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.workshopDesc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #555;
 }

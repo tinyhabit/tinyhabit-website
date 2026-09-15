@@ -1,25 +1,5 @@
 .bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  background: var(--glass-bg);
-  backdrop-filter: var(--backdrop-blur);
-  -webkit-backdrop-filter: var(--backdrop-blur);
-  border-top: 1px solid var(--color-border);
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
-}
-
-@media (min-width: 768px) {
-  .bar {
-    display: none;
-  }
+  display: none !important;
 }
 
 .text {

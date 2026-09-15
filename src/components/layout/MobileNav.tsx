@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { Button } from '../ui/Button';
 import styles from './mobilenav.module.css';
 
@@ -14,33 +14,28 @@ interface MobileNavProps {
 
 export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, items }) => {
   const drawerRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (!isOpen) return;
-    
-    const drawer = drawerRef.current;
-    if (!drawer) return;
-    
-    const focusableElements = drawer.querySelectorAll<HTMLElement>(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0];
-    
-    if (firstElement) {
-      firstElement.focus();
-    }
-    
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
       }
     };
-    
+
     document.addEventListener('keydown', handleKeyDown);
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    onClose();
+    router.push(href);
+  };
 
   return (
     <>
@@ -60,7 +55,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, items }) 
             <div style={{ position: 'relative', width: '32px', height: '32px', borderRadius: '50%', overflow: 'hidden' }}>
               <Image src="/images/logo.jpg" alt="TinyHabit Logo" fill sizes="32px" style={{ objectFit: 'cover' }} />
             </div>
-            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, color: 'var(--color-brand-dark)' }}>
+            <span style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, color: 'var(--color-brand-dark)', fontSize: '1.1rem' }}>
               TinyHabit
             </span>
           </div>
@@ -72,9 +67,13 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, items }) 
         <ul className={styles.menu}>
           {items.map((item) => (
             <li key={item.href}>
-              <Link href={item.href} className={styles.link} onClick={onClose}>
+              <a
+                href={item.href}
+                className={styles.link}
+                onClick={(e) => handleLinkClick(e, item.href)}
+              >
                 {item.label}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>

@@ -3,6 +3,7 @@ import '@/styles/globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { StickyMobileCTA } from '@/components/layout/StickyMobileCTA';
+import { ScrollToTop } from '@/components/layout/ScrollToTop';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
+    <html lang="vi" data-scroll-behavior="smooth">
       <head>
         <JsonLd data={orgJsonLd} />
       </head>
@@ -71,6 +72,7 @@ export default function RootLayout({
         <main className="mainContent">{children}</main>
         <Footer />
         <StickyMobileCTA />
+        <ScrollToTop />
       </body>
     </html>
   );

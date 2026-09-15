@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -12,18 +12,30 @@ const NAV_ITEMS = [
   { label: 'Trang chủ', href: '/' },
   { label: 'Bộ sưu tập', href: '/bo-suu-tap' },
   { label: 'Membership', href: '/membership' },
-  { label: 'Quà Tặng', href: '/qua-tang' },
+  { label: 'Quà Tặng', href: '/qua-tang-membership' },
   { label: 'Về TinyHabit', href: '/ve-tinyhabit' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Liên hệ', href: '/lien-he' }
 ];
 
 export const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className={styles.headerWrapper}>
-      <nav className={styles.navbar}>
+    <header className={`${styles.headerWrapper} ${scrolled ? styles.headerScrolled : ''}`}>
+      <nav className={`${styles.navbar} ${scrolled ? styles.hiddenNavbar : ''}`}>
         <Link href="/" className={styles.brand}>
           <div className={styles.brandLogo} style={{ overflow: 'hidden', position: 'relative', width: '36px', height: '36px', borderRadius: '50%' }}>
             <Image
@@ -66,16 +78,19 @@ export const Header: React.FC = () => {
             <span>LIÊN HỆ MUA HÀNG</span>
             <span className={styles.statusDot} />
           </Button>
-
-          <button
-            className={styles.mobileToggle}
-            onClick={() => setMobileOpen(true)}
-            aria-label="Open mobile menu"
-          >
-            ☰
-          </button>
         </div>
       </nav>
+
+      {/* Mobile Toggle Button - Hidden when menu popup is open */}
+      {!mobileOpen && (
+        <button
+          className={`${styles.mobileToggle} ${scrolled ? styles.mobileToggleScrolled : ''}`}
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open mobile menu"
+        >
+          ☰
+        </button>
+      )}
 
       <MobileNav
         isOpen={mobileOpen}
