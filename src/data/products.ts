@@ -4,7 +4,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'journey-90-days',
     slug: 'journey-90-days',
-    name: 'JOURNEY - 90 Days',
+    name: 'JOURNEY - Be/Xanh/Nâu đất [90 Days]',
     category: 'planner',
     categoryName: 'Sổ tay Planner',
     tagline: 'Hành trình 90 ngày định hình thói quen và kiến tạo cuộc sống có chủ đích',
@@ -14,27 +14,29 @@ export const PRODUCTS: Product[] = [
     coverColor: 'Be / Xanh / Nâu đất',
     images: [
       '/images/journey-90-days.webp',
-      'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800'
+      '/archive/scratch/Sreenshot 14.9/journey-90-days.png'
     ],
-    shortDescription: 'Cuốn sổ tay thiết kế theo nguyên lý Gentle Discipline, giúp bạn lập kế hoạch 90 ngày thực tế, theo dõi năng lượng và xây dựng nhịp sống cân bằng.',
-    longDescription: 'Sổ tay Planner JOURNEY 90 Days không chỉ là một công cụ ghi chép công việc, mà là hệ thống quản lý năng lượng và thói quen cá nhân. Dựa trên triết lý Gentle Discipline, cuốn sổ giúp bạn chia nhỏ mục tiêu lớn thành các hành động khả thi mỗi ngày, loại bỏ áp lực hoàn hảo và duy trì sự đều đặn bền vững.',
+    shortDescription: 'Mỗi hành trình phát triển đều bắt đầu từ một hạt mầm nhỏ. Cuốn sổ tay thiết kế theo nguyên lý Gentle Discipline, giúp bạn lập kế hoạch 90 ngày thực tế, theo dõi năng lượng và nuôi dưỡng sự thay đổi bền vững.',
+    longDescription: 'Mỗi hành trình phát triển đều bắt đầu từ một hạt mầm nhỏ. Khi bạn gieo xuống một thói quen tốt, chăm sóc nó mỗi ngày, nó sẽ lớn lên cùng bạn một cách nhẹ nhàng nhưng bền vững. TinyHabit tin rằng sự thay đổi không cần phải ồn ào. Nó chỉ cần được nuôi dưỡng mỗi ngày, để rồi tự nhiên vươn mình, đón lấy ánh sáng và trở thành phiên bản rực rỡ nhất của chính bạn.',
     specs: {
-      dimensions: '14.8 x 21 cm (A5)',
-      pages: 180,
-      paperType: 'Giấy Fort Kem 100gsm chống lóa, không thấm mực',
-      coverMaterial: 'Bìa cứng bọc vải canvas cao cấp',
-      contents: '90 trang ngày, 12 trang tuần, 3 trang tháng, Habit tracker, Energy log & Quarterly reflection'
+      dimensions: 'A5 – 14.8 x 21 cm (nhỏ gọn, dễ mang theo)',
+      pages: 120,
+      paperType: 'Giấy 100gsm – viết mượt, không thấm mực',
+      coverMaterial: 'Bìa cứng cáp, thiết kế tối giản, không thấm nước',
+      contents: 'Trang Name, Hướng dẫn sử dụng, Trang Overall tháng, 3 tháng planner (gần 100 ngày), Trang ghi chú tự do'
     },
     benefits: [
       'Giúp duy trì thói quen mà không bị burnout',
       'Tập trung vào quản lý năng lượng thay vì chỉ ép buộc thời gian',
       'Đánh giá tiến độ hàng tuần và hàng tháng một cách dịu dàng',
-      'Bìa thiết kế tối giản, chất liệu giấy cao cấp dễ viết'
+      'Khâu chỉ thủ công – bền đẹp, mở phẳng khi viết',
+      'Đóng gói hộp giấy vuông/túi giấy xinh xắn kèm thiệp quà tặng'
     ],
     targetAudience: [
-      'Người muốn bắt đầu lập kế hoạch dài hạn nhưng thường bỏ cuộc giữa chừng',
-      'Sinh viên và người đi làm muốn cân bằng giữa năng suất và sự bình yên',
-      'Những ai tìm kiếm phương pháp kỷ luật nhẹ nhàng (Gentle Discipline)'
+      'Những ai muốn bắt đầu quản lý thời gian làm việc, nghỉ ngơi để trở nên năng suất hơn mỗi ngày',
+      'Người yêu thích sự đơn giản, nhẹ nhàng',
+      'Người mong muốn lắng nghe bản thân, sắp xếp lại cuộc sống một cách chậm rãi',
+      'Bạn không cần phải hoàn hảo. Chỉ cần sống rõ, từng ngày.'
     ],
     features: [
       'Khung theo dõi năng lượng Daily Energy Log',
@@ -49,9 +51,9 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    id: 'dopamine-detox-30-days',
-    slug: 'dopamine-detox-30-days',
-    name: 'Dopamine Detox - 30 Days',
+    id: '30-days-dopamine-detox',
+    slug: '30-days-dopamine-detox',
+    name: 'Dopamine Detox - Green Forest/Blue [30 Days]',
     category: 'planner',
     categoryName: 'Sổ tay Planner',
     tagline: '30 ngày ngắt kết nối để kết nối sâu sắc hơn với chính mình',
@@ -61,22 +63,22 @@ export const PRODUCTS: Product[] = [
     coverColor: 'Green Forest / Blue',
     images: [
       '/images/dopamine-detox-30-days.webp',
-      'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=800'
+      '/archive/scratch/Sreenshot 14.9/30-days-dopamine-detox.png'
     ],
     shortDescription: 'Cuốn sổ thiết kế riêng cho hành trình 30 ngày giảm bớt kích thích mạng xã hội, lấy lại sự tập trung và làm chủ sự chú ý.',
-    longDescription: 'Dopamine Detox 30 Days là cuốn sổ tay chuyên biệt giúp bạn chủ động nhận diện các thói quen gây phân tâm (mạng xã hội, thông báo điện thoại, mua sắm ngẫu hứng) và tái lập sự tập trung sâu sắc. Với lộ trình 30 ngày dịu dàng, bạn sẽ lấy lại sự bình yên trong tâm trí.',
+    longDescription: 'Trong một thế giới luôn đòi hỏi sự chú ý của bạn, việc làm chủ thói quen sử dụng công nghệ là chìa khóa để giảm bớt căng thẳng, tăng khả năng phục hồi và tìm thấy sự rõ ràng trong tâm hồn. Sức mạnh tinh thần thực sự không đến từ việc tránh thế giới ảo, mà là học cách ngắt kết nối đúng lúc để kết nối sâu sắc hơn với chính mình.',
     specs: {
-      dimensions: '13 x 19 cm',
-      pages: 100,
-      paperType: 'Giấy kem Nhật Bản 100gsm',
-      coverMaterial: 'Bìa mỹ thuật cao cấp dập nổi',
-      contents: 'Lộ trình Detox 30 ngày, Digital Distraction Log, Daily Focus Planner, Weekly Reflection'
+      dimensions: 'A5 - 14.8 x 21 cm',
+      pages: 120,
+      paperType: 'Giấy 100gsm chống thấm nhòe, phù hợp cho nhiều loại bút màu',
+      coverMaterial: 'Bìa màu cán màng mờ chống thấm nước',
+      contents: 'Dopamine Menu (In màu rực rỡ), Dopamine Factory (Layout hàng ngày & The Rewards), The Mirror Page, 60 trang Dot Grid Pages'
     },
     benefits: [
       'Lấy lại sự tập trung khi học tập và làm việc',
       'Giảm bớt áp lực so sánh trên mạng xã hội',
       'Tạo thói quen làm việc sâu (Deep Work) mỗi ngày',
-      'Giúp giấc ngủ và tinh thần thư thái hơn'
+      'Tối ưu hóa giấc ngủ và giữ tinh thần thư thái'
     ],
     targetAudience: [
       'Người dễ mất tập trung bởi điện thoại và mạng xã hội',
@@ -95,9 +97,9 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    id: 'inner-power-60-days',
-    slug: 'inner-power-60-days',
-    name: 'Inner Power - 60 Days',
+    id: 'inner-power',
+    slug: 'inner-power',
+    name: 'Inner Power [60 Days]',
     category: 'planner',
     categoryName: 'Sổ tay Planner',
     tagline: '60 ngày đánh thức sức mạnh nội tại và sự kỷ luật tự giác',
@@ -107,16 +109,16 @@ export const PRODUCTS: Product[] = [
     coverColor: 'Tím hoa cà / Nâu ấm',
     images: [
       '/images/inner-power-60-days.webp',
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800'
+      '/archive/scratch/Sreenshot 14.9/inner-power.png'
     ],
-    shortDescription: 'Cuốn sổ tay giúp bạn xây dựng sức mạnh tinh thần, vượt qua sự trì hoãn và tin tưởng vào khả năng tiến bộ của bản thân.',
-    longDescription: 'Inner Power 60 Days được thiết kế dành cho những ai muốn xây dựng sự kỷ luật nội tại kiên cường mà không phải dùng đến sự ép buộc khắc nghiệt. Thông qua khung hành động 60 ngày, bạn được hướng dẫn cách chuyển hóa nỗi sợ thành hành động nhỏ và ghi nhận sự tiến bộ cá nhân.',
+    shortDescription: 'Chào bạn! 🌿 Đây là hành trình 60 ngày giúp bạn thực hành chăm sóc bản thân toàn diện và kết nối lại với nguồn năng lượng chân thật của chính mình.',
+    longDescription: 'Chào bạn! 🌿 Mình rất vui được giới thiệu với bạn cuốn sổ “Inner Power”. Đây là hành trình 60 ngày giúp bạn thực hành chăm sóc bản thân toàn diện và kết nối lại với nguồn năng lượng chân thật của chính mình - một cách thật dịu dàng và không chút áp lực. Hành trình này giống như việc thong thả nuôi dưỡng bộ rễ vững chắc bên trong để đóa hoa tự tin bung nở vậy.',
     specs: {
-      dimensions: '14.8 x 21 cm (A5)',
-      pages: 140,
-      paperType: 'Giấy Fort Kem 100gsm',
-      coverMaterial: 'Bìa bọc vải mềm có dây đánh dấu trang',
-      contents: 'Mindset Audit, 60 Days Power Tracker, Self-belief Prompts, Action Plan'
+      dimensions: 'A5 - 14.8 x 21 cm',
+      pages: 120,
+      paperType: 'Giấy 100gsm (không lem mực)',
+      coverMaterial: 'Thiết kế tối giản, êm dịu với các họa tiết hoa cỏ mềm mại',
+      contents: '4 Trụ cột vững chắc (Thân sắc, Trí tuệ, Cảm xúc, Hành động), Nhịp điệu sống tỉnh thức (Menu Chăm Sóc Bản Thân), Trạm dừng chân nhìn lại (Ngày 20, 40, 60)'
     },
     benefits: [
       'Vượt qua tâm lý hoài nghi bản thân và sự trì hoãn',
@@ -227,8 +229,8 @@ export const PRODUCTS: Product[] = [
     }
   },
   {
-    id: 'kit-gieo-mam-thoi-quen',
-    slug: 'kit-gieo-mam-thoi-quen',
+    id: 'kit-gieo-mam-thoi-quen-tinyhabit',
+    slug: 'kit-gieo-mam-thoi-quen-tinyhabit',
     name: 'Kit Gieo Mầm Thói Quen',
     category: 'bo-tro',
     categoryName: 'Sản phẩm Bổ trợ',
@@ -237,36 +239,35 @@ export const PRODUCTS: Product[] = [
     currency: 'VND',
     coverColor: 'Nhiều màu tươi sáng',
     images: [
-      'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800'
+      '/images/kit-gieo-mam-thoi-quen-cover.jpg'
     ],
-    shortDescription: 'Bộ sticker & tracker theo dõi thói quen sinh động, mang lại niềm vui nho nhỏ mỗi khi bạn hoàn thành mục tiêu.',
-    longDescription: 'Kit Gieo Mầm Thói Quen kết hợp các thẻ Habit Tracker trực quan cùng bộ nhãn dán đáng yêu, giúp việc gạch tên công việc mỗi ngày trở nên vui vẻ và hào hứng. Công cụ này biến việc duy trì kỷ luật thành một trò chơi gieo mầm thú vị.',
+    shortDescription: 'Bộ công cụ Gieo Mầm Thói Quen giúp bạn nuôi dưỡng và duy trì các hành động nhỏ tích cực mỗi ngày.',
+    longDescription: 'Kit Gieo Mầm Thói Quen chính là công cụ giúp bạn tối ưu hóa phương pháp TinyHabit. Với đầy đủ chậu, viên nén hữu cơ, hạt giống và tài liệu hướng dẫn, bộ sản phẩm biến việc xây dựng kỷ luật cá nhân thành hành trình gieo mầm thú vị.',
     specs: {
-      dimensions: 'Bao gồm thẻ 10x15cm và sheet sticker A6',
-      pages: 12,
-      paperType: 'Giấy couche dày & sticker waterproof',
-      coverMaterial: 'Túi đựng kraft thân thiện môi trường',
-      contents: '12 thẻ Habit Tracker tháng + 3 sheet sticker minh họa'
+      dimensions: 'Bao gồm chậu, viên nén, hạt giống & tài liệu hướng dẫn',
+      pages: 1,
+      paperType: 'Giấy mỹ thuật & bao bì thân thiện môi trường',
+      coverMaterial: 'Hộp giấy kraft cao cấp',
+      contents: '1 Chậu, 1 Viên nén hữu cơ, Hạt giống ý nghĩa, Que ghi thói quen & Tài liệu hướng dẫn'
     },
     benefits: [
-      'Tạo động lực thị giác mạnh mẽ khi thấy chuỗi thói quen lớn dần',
-      'Phù hợp kẹp vào mọi loại sổ tay hoặc dán lên góc làm việc',
-      'Quà tặng kèm dễ thương cho bạn bè và bản thân'
+      'Tối ưu hóa phương pháp TinyHabit khoa học',
+      'Hữu hình hóa sự kiên trì qua từng ngày lớn lên của cây',
+      'Tạo động lực và cảm giác hoàn thành mỗi ngày'
     ],
     targetAudience: [
-      'Những ai yêu thích sự sáng tạo và ghi chép nhiều màu sắc',
-      'Người cần sự nhắc nhở trực quan ngay trên bàn học/làm việc'
+      'Người muốn bắt đầu tạo dựng thói quen mới nhỏ dịu dàng',
+      'Món quà ý nghĩa dành tặng bản thân và người thân yêu'
     ],
     seo: {
-      title: 'Kit Gieo Mầm Thói Quen - Bộ Tracker Trực Quan | TinyHabit',
-      description: 'Bộ công cụ Kit Gieo Mầm Thói Quen giúp bạn theo dõi mục tiêu mỗi ngày thật vui vẻ. Giá 30.000đ tại TinyHabit.',
-      ogImage: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&q=80&w=800'
+      title: 'Kit Gieo Mầm Thói Quen | TinyHabit',
+      description: 'Bộ công cụ Kit Gieo Mầm Thói Quen giúp bạn nuôi dưỡng mục tiêu mỗi ngày. Giá 30.000đ tại TinyHabit.',
+      ogImage: '/images/kit-gieo-mam-thoi-quen-cover.jpg'
     }
   },
   {
-    id: 'talk-to-yourself-gently',
-    slug: 'talk-to-yourself-gently',
+    id: 'talk-to-yourself-gently-tinyhabit',
+    slug: 'talk-to-yourself-gently-tinyhabit',
     name: 'Notebook | Talk To Yourself Gently',
     category: 'bo-tro',
     categoryName: 'Sản phẩm Bổ trợ',
@@ -275,8 +276,7 @@ export const PRODUCTS: Product[] = [
     currency: 'VND',
     coverColor: 'Nâu mộc mạc',
     images: [
-      'https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&q=80&w=800'
+      '/images/talk-to-yourself-gently-cover.png'
     ],
     shortDescription: 'Cuốn notebook lò xo bỏ túi xinh xắn với thông điệp nhắc nhở sự bao dung và yêu thương bản thân.',
     longDescription: 'Notebook Talk To Yourself Gently là người bạn đồng hành nhỏ nhắn cho mọi ghi chép ngẫu hứng. Bìa sổ in thông điệp ấm áp, nhắc nhở bạn ngừng tự phán xét và luôn dành cho bản thân những lời nói dịu dàng nhất.',
@@ -299,12 +299,12 @@ export const PRODUCTS: Product[] = [
     seo: {
       title: 'Notebook Talk To Yourself Gently | TinyHabit',
       description: 'Sổ tay lò xo A6 Talk To Yourself Gently nhắc nhở sự bao dung với bản thân. Giá 48.000đ tại TinyHabit.',
-      ogImage: 'https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=800'
+      ogImage: '/images/talk-to-yourself-gently-cover.png'
     }
   },
   {
-    id: 'just-me-and-my-mind',
-    slug: 'just-me-and-my-mind',
+    id: 'just-me-and-my-mind-tinyhabit',
+    slug: 'just-me-and-my-mind-tinyhabit',
     name: 'Notebook | Just Me & My Mind',
     category: 'bo-tro',
     categoryName: 'Sản phẩm Bổ trợ',
@@ -313,8 +313,7 @@ export const PRODUCTS: Product[] = [
     currency: 'VND',
     coverColor: 'Xanh pastel / Kem',
     images: [
-      'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800',
-      'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&q=80&w=800'
+      '/images/just-me-and-my-mind-cover.png'
     ],
     shortDescription: 'Cuốn sổ nhỏ dành cho những khoảnh khắc một mình, nơi bạn tự do bộc lộ suy nghĩ và ý tưởng sáng tạo.',
     longDescription: 'Notebook Just Me & My Mind tôn vinh những giây phút tĩnh lặng cá nhân. Dù là một ý tưởng lóe lên giữa ngày hay những dòng cảm xúc muộn đêm, cuốn sổ này luôn sẵn sàng lắng nghe mà không có bất kỳ rào cản nào.',
@@ -337,7 +336,7 @@ export const PRODUCTS: Product[] = [
     seo: {
       title: 'Notebook Just Me & My Mind | TinyHabit',
       description: 'Sổ tay A6 Just Me & My Mind cho không gian suy ngẫm cá nhân. Giá 48.000đ tại TinyHabit.',
-      ogImage: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=800'
+      ogImage: '/images/just-me-and-my-mind-cover.png'
     }
   }
 ];
@@ -348,7 +347,15 @@ export function getAllProducts(): Product[] {
 }
 
 export function getProductBySlug(slug: string): Product | undefined {
-  return PRODUCTS.find((p) => p.slug === slug);
+  const normalized = slug.toLowerCase();
+  return PRODUCTS.find((p) => {
+    if (p.slug === normalized) return true;
+    if (normalized === 'dopamine-detox-30-days' && p.slug === '30-days-dopamine-detox') return true;
+    if (normalized === '30-days-dopamine-detox' && p.slug === 'dopamine-detox-30-days') return true;
+    if (normalized === 'inner-power-60-days' && p.slug === 'inner-power') return true;
+    if (normalized === 'inner-power' && p.slug === 'inner-power-60-days') return true;
+    return false;
+  });
 }
 
 export function getProductsByCategory(category: ProductCategoryType): Product[] {

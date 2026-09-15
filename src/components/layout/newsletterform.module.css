@@ -1,11 +1,19 @@
 .form {
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  gap: 10px;
   margin-top: 8px;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .form {
+    flex-direction: row;
+  }
 }
 
 .input {
-  flex: 1;
+  width: 100%;
   padding: 12px 18px;
   border-radius: var(--radius-pill);
   border: none;
@@ -24,6 +32,7 @@
   border: none;
   cursor: pointer;
   transition: background-color var(--transition-fast);
+  white-space: nowrap;
 }
 
 .submitBtn:hover {

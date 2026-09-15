@@ -60,6 +60,7 @@ export const Header: React.FC = () => {
             external
             variant="outline"
             size="sm"
+            className={styles.desktopCta}
             style={{ borderRadius: 'var(--radius-pill)', gap: '8px' }}
           >
             <span>LIÊN HỆ MUA HÀNG</span>

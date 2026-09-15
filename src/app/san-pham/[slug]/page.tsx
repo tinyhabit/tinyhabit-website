@@ -62,7 +62,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const formattedPrice = new Intl.NumberFormat('vi-VN', {
     style: 'currency',
     currency: 'VND'
-  }).format(product.price).replace('₫', 'vnd');
+  }).format(product.price).replace(/\s?₫/, 'đ');
 
   const instagramMsg = encodeURIComponent(`Xin chào TinyHabit, mình muốn được tư vấn và đặt hàng cuốn ${product.name}`);
 

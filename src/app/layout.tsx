@@ -15,6 +15,11 @@ export const metadata: Metadata = {
   description: 'Self-development lifestyle brand tiên phong tại Việt Nam với các sản phẩm Planner, Journaling và công cụ nuôi dưỡng thói quen dịu dàng.',
   keywords: ['TinyHabit', 'Planner', 'Journaling', 'Sổ tay 90 ngày', 'Gentle Discipline', 'Xây dựng thói quen', 'Self development'],
   authors: [{ name: 'TinyHabit Team' }],
+  icons: {
+    icon: '/images/logo.jpg',
+    shortcut: '/images/logo.jpg',
+    apple: '/images/logo.jpg',
+  },
   openGraph: {
     title: 'TinyHabit — Nurturing Habits, Growing Dreams',
     description: 'Bắt đầu hành trình thay đổi bản thân từ những hành động nhỏ, lặp lại được.',

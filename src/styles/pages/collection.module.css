@@ -1,10 +1,11 @@
 .container {
   padding-bottom: var(--space-2xl);
+  width: 100%;
 }
 
 .header {
   text-align: center;
-  padding: var(--space-xl) 0 var(--space-md);
+  padding: var(--space-lg) 0 var(--space-md);
 }
 
 .subtitle {
@@ -15,14 +16,15 @@
 }
 
 .title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 6vw, 3rem);
   font-weight: 800;
   margin-top: 8px;
+  word-wrap: break-word;
 }
 
 .description {
   color: var(--color-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.95rem, 3.5vw, 1.05rem);
   max-width: 600px;
   margin: 12px auto 0;
 }
@@ -34,15 +36,24 @@
 
 .sectionHeader {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
   margin-bottom: var(--space-md);
   border-bottom: 2px solid var(--color-border);
   padding-bottom: 12px;
 }
 
+@media (min-width: 520px) {
+  .sectionHeader {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .sectionTitle {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
   font-weight: 700;
 }
 
@@ -55,3 +66,4 @@
   text-align: center;
   margin: var(--space-xl) 0;
 }
+
